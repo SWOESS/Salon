@@ -136,7 +136,7 @@ namespace Salon.Controllers
 
             
             //TODO: read session variables 4 teacher & room!
-            AspNetUsers teacher = db.AspNetUsers.Find("33abf8c7-5ae1-4ed6-819f-9d325e57d7bb");
+            AspNetUsers teacher = db.AspNetUsers.Find("1ebceeb5-cdb9-40a8-9d9d-e92598fdd76e");
             Rooms room = db.Rooms.Find(2);
             if (Session["room"] != null) {
                 room = db.Rooms.Find(Int32.Parse(Session["room"].ToString()));
@@ -144,7 +144,7 @@ namespace Salon.Controllers
             if(Session["teacher"] != null) {
                 teacher = db.AspNetUsers.Find(Session["teacher"]);
             }
-            int duration = 0;
+            int duration = 0; 
 
             Visits visit;
 
