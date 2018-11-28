@@ -202,7 +202,8 @@ namespace Salon.Controllers
 
         //
         // GET: /Account/Register
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
+        [AllowAnonymous]
         public ActionResult Register()
         {
             return View();
@@ -211,7 +212,8 @@ namespace Salon.Controllers
         //
         // POST: /Account/Register
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
+        [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {

@@ -114,17 +114,8 @@ namespace Salon.Models
         public string lastName { get; set; }
 
         [Required]
-        [StringLength(100, MinimumLength = 3)]
-        [Display(Name = "Klasse")]
-        public string Class { get; set; }
-
-        [Required]
         [Display(Name = "Eintrittsdatum")]
         public DateTime entryDate { get; set; }
-
-        [Required]
-        [Display(Name = "Austrittdatum")]
-        public DateTime resignationDate { get; set; }
     }
     public class ResetPasswordViewModel
     {
